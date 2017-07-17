@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: RD-Gateway
+
+server:
+  port: 8080
+
+#eureka:
+#    instance:
+#        registryFetchIntervalSeconds: 1
+#        leaseRenewalIntervalInSeconds: 2
+#        leaseExpirationDurationInSeconds: 5
+#    client:
+#        initialInstanceInfoReplicationIntervalSeconds: 5
+#ribbon:
+#  ServerListRefreshInterval: 1000
+
+zuul:
+  routes:
+    route-profiles:
+      serviceId: RD-Profile
+      path: /profiles/**
+    route-names:
+      serviceId: RD-Name
+      path: /phones/names/**
+    route-numbers:
+      serviceId: RD-Number
+      path: /phones/numbers/**
