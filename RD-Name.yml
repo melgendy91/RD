@@ -1,0 +1,11 @@
+server:
+  port: 8000
+
+spring:
+  profiles:
+    active: development
+  datasource:
+    url: jdbc:postgresql://localhost:5432/social
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
